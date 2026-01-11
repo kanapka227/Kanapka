@@ -1,5 +1,4 @@
-/* Общие стили */
-body {
+body{
     background-image: url(fon.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -8,250 +7,58 @@ body {
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
+    overflow-x: hidden;
 }
 
-/* Общий стиль блоков */
+
 aside {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(5px);
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px;
-}
-
-/* Бургер */
-.burger {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    font-size: 25px;
-    z-index: 100;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(5px);
-    color: white;
-    cursor: pointer;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
-
-/* Блок Дмитрия */
-#dmitrij {
+    padding: 10px;
+    margin: 10px;
     text-align: center;
+    z-index: 10;
+}
+#dmitrij {
+    position: relative;
+    height: 400px;
 }
 
 #dmitrij img {
-    width: 250px;
-    max-width: 80%;
-    margin-top: 20px;
+    position: absolute;
+    top: 120px;
+    left: 80%;
+    transform: translateX(-50%);
+    z-index: 10;
 }
 
-/* Заголовок */
-header h2 {
+header{
+    position: relative;
+    
+}
+header h2{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 30px;
-    margin-bottom: 10px;
 }
-
-header div {
+header div{
     text-align: left;
-    margin: 0 auto;
-    max-width: 250px;
+    position: absolute;
+    top: 100px;
+    left: 5%;
+    transform: translateX(-50%);
 }
 
-/* Контакт-меню */
-#kontakt {
-    position: fixed;
+#kontakt{
+    margin: 0;
+    overflow-x: hidden;
+    position: absolute;
     top: 20px;
     right: 20px;
     width: 300px;
-    height: 400px; /* фиксированная высота */
+    height: 400px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
-    z-index: 99;
-    transform: translateX(110%);
-    transition: transform 0.3s ease;
-    padding-top: 80px;
-    text-align: center;
-}
-
-#kontakt.open {
-    transform: translateX(0);
-}
-
-#kontakt h2 {
-    margin-bottom: 30px;
-}
-
-#kontakt div {
-    margin: 20px 0;
-    font-size: 22px;
-}
-
-/* Ссылки */
-a:link {
-    color: cornflowerblue;
-}
-
-a:visited {
-    color: cadetblue;
-}
-
-/* Mira — ровно под нижним краем контакт-меню */
-#mira {
-    position: absolute;
-    top: calc(20px + 400px); /* 20px — отступ меню сверху, 400px — высота меню */
-    right: 20px;
-    width: 150px;
-    height: auto;
-    transform-origin: top center;
-    animation: swing 2.5s ease-in-out infinite;
-    z-index: 9;
-}
-
-@keyframes swing {
-    0% { transform: rotate(3deg); }
-    50% { transform: rotate(-3deg); }
-    100% { transform: rotate(3deg); }
-}
-
-/* Адаптивность */
-@media (max-width: 600px) {
-
-    aside {
-        margin: 10px;
-        padding: 15px;
-    }
-
-    header h2 {
-        font-size: 24px;
-    }
-
-    #dmitrij img {
-        width: 70%;
-    }
-
-    #kontakt {
-        width: 80%;
-        right: 10px;
-    }
-
-    /* Mira остаётся под меню даже на телефоне */
-    #mira {
-        top: calc(20px + 400px);
-        right: 10px;
-        width: 120px;
-    }
-}
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
-
-/* Блок Дмитрия */
-#dmitrij {
-    text-align: center;
-}
-
-#dmitrij img {
-    width: 250px;
-    max-width: 80%;
-    margin-top: 20px;
-}
-
-/* Текст в шапке */
-header h2 {
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-header div {
-    text-align: left;
-    margin: 0 auto;
-    max-width: 250px;
-}
-
-/* Меню контактов */
-#kontakt {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 280px;
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
-    transform: translateX(110%);
-    transition: transform 0.3s ease;
-    z-index: 99;
-    padding-top: 80px;
-    text-align: center;
-}
-
-#kontakt.open {
-    transform: translateX(0);
-}
-
-#kontakt h2 {
-    margin-bottom: 30px;
-}
-
-#kontakt div {
-    margin: 20px 0;
-    font-size: 22px;
-}
-
-/* Ссылки */
-a:link {
-    color: cornflowerblue;
-}
-
-a:visited {
-    color: cadetblue;
-}
-
-/* Мира */
-#mira {
-    display: block;
-    margin: 40px auto;
-    width: 150px;
-    height: auto;
-    animation: swing 2.5s ease-in-out infinite;
-}
-
-@keyframes swing {
-    0% { transform: rotate(3deg); }
-    50% { transform: rotate(-3deg); }
-    100% { transform: rotate(3deg); }
-}
-
-/* 📱 Адаптивность для телефонов */
-@media (max-width: 600px) {
-
-    aside {
-        margin: 10px;
-        padding: 15px;
-    }
-
-    header h2 {
-        font-size: 24px;
-    }
-
-    #dmitrij img {
-        width: 70%;
-    }
-
-    #kontakt {
-        width: 80%;
-    }
-
-    #mira {
-        width: 120px;
-        margin-top: 20px;
-    }
-}
     border-right: 1px solid rgba(255, 255, 255, 0.3);
     z-index: 99;
     transform: translateX(+110%);
@@ -348,7 +155,4 @@ button {
   100% {
     transform: rotate(3deg);
   }
-
 }
-
-
