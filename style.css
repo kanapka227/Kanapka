@@ -15,6 +15,7 @@ aside {
     padding: 10px;
     margin: 10px;
     text-align: center;
+    z-index: 10;
 }
 #dmitrij {
     position: relative;
@@ -141,6 +142,7 @@ button {
     display: inline-block;
     transform-origin: top center;
     animation: swing 2.5s ease-in-out infinite;
+    z-index: 9;
 }
 
 @keyframes swing {
@@ -153,4 +155,5 @@ button {
   100% {
     transform: rotate(3deg);
   }
+
 }
