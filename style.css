@@ -108,7 +108,7 @@ a:hover{
 
 }
 
-@media (max-width: 426px){
+@media (max-width: 768px){
     header{
         width: 100%;
     }
@@ -148,4 +148,5 @@ a:hover{
     .profil2{
         display: block;
     }
+
 }
